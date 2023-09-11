@@ -71,4 +71,5 @@ public class TV{
     public boolean getEstado(){
         return estado;
     }
+
 }

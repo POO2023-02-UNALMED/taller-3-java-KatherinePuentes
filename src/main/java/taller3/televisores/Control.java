@@ -45,6 +45,6 @@ public class Control{
     }
 
     public void enlazar(String televisor){
-        tv= televisor;
+        this.tv= televisor;
     }
 }

@@ -88,7 +88,7 @@ public class TV {
             canal--;
     }
 
-    public void volumenlUp(){
+    public void volumenUp(){
         if (sePuedeVol(volumen+1))
             volumen++;
     }

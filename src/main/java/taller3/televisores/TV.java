@@ -1,6 +1,6 @@
 package taller3.televisores;
 
-public class TV{
+public class TV {
 
     private Marca marca;
     private int canal= 1;
@@ -10,63 +10,65 @@ public class TV{
     private Control control;
     private static int numTV;
 
-    public TV(Marca mar, boolean est){
-
+    public TV(Marca marca, boolean estado){
+        this.marca= marca;
+        this.estado= estado;
+        numTV++;
     }
 
     public Marca getMarca (){
         return marca;
     }
 
-    public Marca setMarca (Marca marc){
-        marca= marc;
+    public void setMarca(Marca marca){
+        this.marca= marca;
     }
 
     public int getCanal(){
         return canal;
     }
 
-    public int setCanal(int can){
-        canal= can;
+    public void setCanal(int canal){
+        this.canal= canal;
     }
 
     public int getPrecio(){
         return precio;
     }
 
-    public int setPrecio(int prec){
-        precio= prec;
+    public void setPrecio(int precio){
+        this.precio= precio;
     }
 
     public int getVolumen(){
         return volumen;
     }
 
-    public int setVolumen(int vol){
-        volumen= vol;
+    public void setVolumen(int volumen){
+        this.volumen= volumen;
     }
 
     public Control getControl(){
         return control;
     }
 
-    public Control setControl(Control cont){
-        control= cont;
+    public void setControl(Control control){
+        this.control= control;
     }
 
     public static int getNumTV(){
         return numTV;
     }
 
-    public static int setNumTV(int num){
-        numTV= num;
+    public static void setNumTV(int numTV){
+        TV.numTV= numTV;
     }
 
-    public boolean turnOn(){
+    public void turnOn(){
         estado= true;
     }
 
-    public boolean turnOff(){
+    public void turnOff(){
         estado= false;
     }
 
@@ -98,7 +100,7 @@ public class TV{
         if (!estado)
             return false;
 
-        return canal>=1 && cala<=120;
+        return canal>=1 && canal<=120;
     }
 
     public boolean sePuedeVol(int volumen){

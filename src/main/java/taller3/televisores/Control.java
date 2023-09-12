@@ -1,7 +1,6 @@
 package taller3.televisores;
 
 public class Control{
-
     private TV tv;
 
     public boolean turnOn(){
@@ -46,7 +45,8 @@ public class Control{
         return volumen>=0 && volumen<=7;
     }
 
-    public void enlazar(String televisor){
-        this.tv= televisor;
+    public void enlazar(TV tv){
+        this.tv= tv;
+        tv.setControl(this);
     }
 }
